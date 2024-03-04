@@ -1,0 +1,606 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --p-blue: #85d3f2;
+    --p-yellow: #ffd786;
+    --p-pink: #daa8cd;
+    --p-pink2: #f4afd7;
+    --p-purple: #9996cb;
+}
+
+@font-face {
+    font-family: "Trade Gothic";
+    src: url(./assets/TradeGothicW02BoldCn20.ttf) format('truetype');
+    font-weight: bold;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: var(--p-pink);
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    max-width: 100%;
+    height: 2rem;
+    padding: 3rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.icon-container {
+    width: 25px;
+}
+
+.icon-container .icon {
+    width: 100%;
+    min-width: 25px;
+    object-fit: contain;
+    display: block;
+}
+
+
+
+.scrolled {
+    background-color: var(--p-blue);
+}
+
+#about,
+#history,
+#influences {
+    scroll-margin-top: 7rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+
+nav ul a:hover {
+    color: var(--p-yellow);
+}
+
+#nav-symbol {
+    display: block;
+    width: 35px;
+}
+
+nav ul a, .title-font {
+    font-family: "Trade Gothic", Arial, sans-serif;
+}
+
+nav ul a {
+    font-size: 22px;
+    color: white;
+    transition: all 0.15s ease-in-out;
+}
+
+nav .icon-container {
+    display: none;
+}
+
+#intro-video {
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    opacity: 70%;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Bebas Neue" , Arial, sans-serif;
+    font-weight: 200;
+    background-color: black;
+}
+.hero-text {
+    z-index: 10;
+    text-align: center;
+    position: absolute;
+}
+
+.hero img {
+    width: 500px;
+}
+
+.hero h1, .hero p {
+    color: white;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 150px;
+    letter-spacing: 15px;
+    text-shadow: 2px 2px 5px rgba(206, 206, 206, 1);
+    padding-left: 15px;
+}
+
+.hero p {
+    font-size: 30px;
+}
+
+#intro {
+    display: flex;
+    margin: 3rem 6rem;
+    gap: 4rem;
+}
+
+.content p {
+    text-align: justify;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+    height: fit-content;
+    padding: 0rem 2rem;
+    border: 2px solid var(--p-pink);
+}
+
+aside img {
+    width: 200px;
+}
+
+aside section:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside section:not(:first-child) {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.4rem 3rem 0.4rem 0;
+    
+    font-size: 13px;
+}
+
+aside section:not(:first-child):not(:last-child) {
+    border-bottom: 2px solid var(--p-pink);
+    
+}
+
+aside section:first-child h3 {
+    text-align: center;
+    font-weight: bolder;
+}
+aside section:not(:first-child) h3 {
+    flex-basis: 2rem;
+    width: 3rem;
+}
+
+aside section ul, aside section li {
+    margin: 0;
+    margin-left: -3px;
+    padding: 0;
+}
+
+aside section a {
+    margin-left: -0.5rem;
+}
+
+.content h2 {
+    font-size: 30px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--p-pink);
+    margin-bottom: 1px;
+}
+
+#members h2, #albums h2 {
+    font-size: 40px;
+}
+
+#members h2 {
+    margin-top: -1rem;
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
+}
+
+#members {
+    display: flex;
+    text-align: center;
+    padding: 4rem 6rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--p-pink2);
+    scroll-margin-top: 4.5rem;
+    color: white;
+}
+
+.members-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4.5rem;
+    row-gap: 2rem;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.member img {
+    width: 300px;
+    height: 400px;
+    margin: 1rem 0;
+    border: 5px solid white;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    transition: all 0.15s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.member img:hover {
+    box-shadow: 2px 3px 15px 0px var(--p-blue);
+    transform: scale(104%);
+}
+
+.identity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.identity h3, .identity p {
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    color: #808080;
+}
+
+#buttons {
+    margin: 0rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: white;
+    border: 2px solid var(--p-pink2);
+    border-radius: 10px;
+    color: black;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.active, button:hover {
+    color: white;
+    background-color: var(--p-pink2);
+}
+
+
+
+#albums {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 4.5rem;
+}
+
+#albums h2 {
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--p-pink);
+}
+
+.album {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid var(--p-pink);
+    border-radius: 20px;
+    margin: 0rem 2rem 5rem 2rem;
+    max-width: max-content;
+    padding: 3rem 5rem;
+    gap: 10rem;
+    row-gap: 2rem;
+}
+
+.album img {
+    width: 250px;
+}
+
+.album-info figure {
+    margin: 0;
+}
+
+.album-info figcaption {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.album-info p {
+    margin: 0;
+    font-size: 15px;
+    
+}
+
+.album-details {
+    text-align: left;
+}
+
+.album-details ol {
+    padding: 0;
+    margin: 0;
+}
+
+.album-details h4 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: max-content;
+    padding: 1rem 1rem;
+    background-color: var(--p-pink2);
+    color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+
+#al, #st, #bne, #riot, #awkif {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .control {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar a.icon-container {
+        display: block;
+    }
+
+    .navbar.navbar-responsive {
+        padding-top: 1.5rem;
+        padding: 1.5rem 3rem 1rem 3rem;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .navbar.navbar-responsive ul {
+        display: block;
+    }
+
+    .navbar.navbar-responsive ul a:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .navbar.navbar-responsive a {
+        display: block;
+        text-align: left;
+    }
+
+    #intro {
+        align-items: center;
+        flex-direction: column;
+        margin: 3rem 3rem;
+    }
+
+    aside {
+        width: 14rem;
+        order: 1;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    .members-content {
+        gap: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 115px;
+    }
+
+    
+    .hero p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    aside {
+        padding: 1rem;
+    }
+
+    #albums {
+        overflow-x: auto;
+    }
+
+    .album {
+        padding: 1rem 10px;
+        width: 20rem;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .album img {
+        width: 150px;
+    }
+
+    .member img {
+        width: 240px;
+        height: 320px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+    
+    .hero p {
+        font-size: 20px;
+    }
+
+    #intro {
+        margin: 3rem 1rem;
+    }
+    .content {
+        padding: 0 8px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .member img {
+        width: 158px;
+        height: 210px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+        letter-spacing: 2px;
+        padding-left: 0px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+        text-wrap: wrap;
+    }
+
+    aside {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    aside section:not(:first-child) {
+        flex-direction: column;
+        padding: 10px;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    aside section:not(:first-child) h3, aside section:not(:first-child) p  {
+        padding: 0;
+        margin: 0;
+        flex-basis: 0rem;
+        text-wrap: wrap;
+    }
+
+    #intro {
+        margin: 2rem 0rem;
+        padding: 0rem 1rem;
+        overflow-x: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        padding: 0;
+        margin: 0 auto;
+        width: 14rem;
+    }
+
+    #members {
+        padding: 4rem 0rem;
+        margin: 0;
+        overflow-x: auto;
+    }
+
+    #members h2 {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .members-content {
+        margin: 0 auto;
+    }
+    
+    .identity {
+        font-size: 15px;
+    }
+
+    .album-details h4 {
+        font-size: 16px;
+    }
+
+    .album-details li, .album-details p {
+        font-size: 14px;
+    }
+}
